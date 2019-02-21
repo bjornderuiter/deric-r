@@ -26,9 +26,7 @@ class r::repo::debian(
               # the '/' must be present, otherwise repo name is required
               release     => "${codename}/",
               repos       => '', # default repo is main (not present at cran)
-              include_src => false,
               key         => 'E084DAB9',
-              key_server  => 'keyserver.ubuntu.com',
               notify      => Exec['apt_get_update_for_r'],
             }
           }
